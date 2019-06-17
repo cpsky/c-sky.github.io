@@ -80,4 +80,4 @@ theme: landscape
 deploy:
   type: git
   repo: https://github.com/cpsky/c-sky.github.io.git
-  branch: master
+  branch: public
