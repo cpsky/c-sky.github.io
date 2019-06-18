@@ -1764,7 +1764,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff6ffe;
+  background: #b9d1ff;
 }
 .feed-link,
 .chat {
@@ -2990,4 +2990,9 @@ p#div-border-top-purple {
   border-top-width: 5px;
   border-radius: 3px;
   border-top-color: #9954bb;
+}
+.site-meta {
+  padding: 20px 0;
+  color: #fff;
+  background: #808080;
 }
