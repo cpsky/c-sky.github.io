@@ -1764,7 +1764,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #73bd21;
+  background: #33ff41;
 }
 .feed-link,
 .chat {
@@ -2124,6 +2124,7 @@ pre .javascript .function {
 }
 .-hoofoo-share-buttons {
   display: inline-block;
+  margin-left: 250px;
 }
 .-hoofoo-share-title {
   font-size: 1.1em;
@@ -2144,6 +2145,7 @@ pre .javascript .function {
   -moz-transition: background 0.4s; /* Firefox 4 */
   -webkit-transition: background 0.4s; /* Safari 和 Chrome */
   -o-transition: background 0.4s;
+  text-align: center;
 }
 .-hoofoo-share-weibo:hover {
   background-color: #cf3f41;
