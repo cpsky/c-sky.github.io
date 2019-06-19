@@ -105,7 +105,7 @@
 <meta property="og:description" content="前言​    这几天做了一个leetcode的题，用到了动态规划，因为对算法本身也不熟悉，所以记录下来。 题目 查看leetcode题目  描述：有这么一个游戏，提前在[1,n]中选定一个数字，让你猜数字是什么，如果猜错了的话要支付猜错那个数字所代表的的钱，然后告诉你是猜大了还是猜小了，比如在[1,10]中选定了6，一开始猜的是5，那么就要支付5块钱，之后猜的是7，那么就要支付4块钱，直至猜到正确">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ptab4lsol.bkt.clouddn.com/fibdiagram.jpg">
-<meta property="og:updated_time" content="2019-06-19T03:51:26.474Z">
+<meta property="og:updated_time" content="2019-06-19T10:30:14.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态规划算法学习">
 <meta name="twitter:description" content="前言​    这几天做了一个leetcode的题，用到了动态规划，因为对算法本身也不熟悉，所以记录下来。 题目 查看leetcode题目  描述：有这么一个游戏，提前在[1,n]中选定一个数字，让你猜数字是什么，如果猜错了的话要支付猜错那个数字所代表的的钱，然后告诉你是猜大了还是猜小了，比如在[1,10]中选定了6，一开始猜的是5，那么就要支付5块钱，之后猜的是7，那么就要支付4块钱，直至猜到正确">
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-19 11:51:26" itemprop="dateModified" datetime="2019-06-19T11:51:26+08:00">2019-06-19</time>
+                <time title="修改时间：2019-06-19 18:30:14" itemprop="dateModified" datetime="2019-06-19T18:30:14+08:00">2019-06-19</time>
               
             
           </span>
@@ -471,7 +471,7 @@
              <i class="fa fa-book"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">526(字)</span>
+           <span class="post-count">540(字)</span>
            
          </span>
           
@@ -510,6 +510,7 @@
 <h3 id="我的思路"><a href="#我的思路" class="headerlink" title="我的思路"></a>我的思路</h3><p>​    一开始以为是二分查找的问题，但是不然，二分查找并不能保证最快速的找出想要的数字，而且题目要求要支付多少钱能够<code>保证</code>获胜，二分的思想也与题目不符。后话就是我最后知道了解决这类<code>最</code>的问题一般是使用动态规划法，那就学起来呗。</p>
 <h3 id="动态规划算法介绍"><a href="#动态规划算法介绍" class="headerlink" title="动态规划算法介绍"></a>动态规划算法介绍</h3><p>动态算法的核心就是记住子问题的解</p>
 <p>求解方式有两种①<strong>自顶向下的备忘录法</strong>   ②<strong>自底向上法</strong></p>
+<p>结合具体例子分析一下两种算法</p>
 <p>对于求斐波那契数列来说最常见的方式就是递归法，递归示意图如下：</p>
 <p><img src="http://ptab4lsol.bkt.clouddn.com/fibdiagram.jpg" alt></p>
 <p>​           计算了多次f(1)、f(2)、f(3)，下面使用两种动态规划的方式解决</p>
@@ -982,7 +983,7 @@
     notify: false,
     appId: 'Fl8VYhs3j0nq9UamAfxpRpIN-gzGzoHsz',
     appKey: 'aFoOdqmT208aBXzATYxH25Lz',
-    placeholder: 'Just go go',
+    placeholder: '输入你的邮箱，别人回复你时可以收到通知哦~',
     avatar: 'retro',
     meta: guest,
     pageSize: '10' || 10,
