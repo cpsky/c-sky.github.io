@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cpsky.github.io/"/>
-  <updated>2019-06-18T00:51:44.688Z</updated>
+  <updated>2019-06-18T14:04:54.129Z</updated>
   <id>https://cpsky.github.io/</id>
   
   <author>
@@ -21,14 +21,27 @@
     <link href="https://cpsky.github.io/2019/06/18/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
     <id>https://cpsky.github.io/2019/06/18/动态规划算法学习/</id>
     <published>2019-06-17T16:06:36.000Z</published>
-    <updated>2019-06-18T00:51:44.688Z</updated>
+    <updated>2019-06-18T14:04:54.129Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;​    这几天做了一个leetcode的题，用到了动态规划，因为对算法本身也不熟悉，所以记录下来。&lt;/p&gt;
+&lt;h3 id=&quot;题目&quot;&gt;&lt;a
+        
+      
     
     </summary>
     
       <category term="算法" scheme="https://cpsky.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
+    
+      <category term="动态规划" scheme="https://cpsky.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+      <category term="leetcode" scheme="https://cpsky.github.io/tags/leetcode/"/>
     
   </entry>
   
