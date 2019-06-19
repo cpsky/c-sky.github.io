@@ -1764,7 +1764,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #081ad5;
+  background: #854171;
 }
 .feed-link,
 .chat {
@@ -2995,14 +2995,4 @@ p#div-border-top-purple {
   padding: 20px 0;
   color: #fff;
   background: #808080;
-}
-.hider_title {
-  font-family: "Microsoft Yahei";
-  cursor: pointer;
-}
-.close:after {
-  content: "▼";
-}
-.open:after {
-  content: "▲";
 }
