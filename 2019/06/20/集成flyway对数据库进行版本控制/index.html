@@ -96,18 +96,21 @@
 
 
 
-  <meta name="description" content="前言​    每次做完一些配置都会忘，都要回去看博客，mybatis-generator的配置算是比较麻烦的了，但是配好之后用起来很方便，什么mapper，xml、model一键生成，几乎也不用自己写sql语句，爽的飞起，所以必须记录一下。 ​    官方文档 步骤​    首先确保你已经在pom文件中添加了mybatis的相关依赖。 1.pom文件中添加plugin，在里面添加数据库相关驱动12">
-<meta name="keywords" content="mybatis">
+  <meta name="description" content="前言​    flyway官网 是这样描述自己的产品的：flyway是数据库的版本控制工具，它可以使数据库迁移变得简单。对我这种个人学习者的人来说，第二点太重要了，如果我换了个电脑，在github上clone下来源代码，通过执行一条命令，数据库就全部建好了。Springboot如何集成flyway呢？如何使用呢？ 步骤1.在pom文件中添加plugin​    示例如下： 123456789101">
+<meta name="keywords" content="flyway">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mybatis generator配置">
-<meta property="og:url" content="https://cpsky.github.io/2019/06/20/mybatis-generator配置/index.html">
+<meta property="og:title" content="集成flyway对数据库进行版本控制">
+<meta property="og:url" content="https://cpsky.github.io/2019/06/20/集成flyway对数据库进行版本控制/index.html">
 <meta property="og:site_name" content="史锴源的博客">
-<meta property="og:description" content="前言​    每次做完一些配置都会忘，都要回去看博客，mybatis-generator的配置算是比较麻烦的了，但是配好之后用起来很方便，什么mapper，xml、model一键生成，几乎也不用自己写sql语句，爽的飞起，所以必须记录一下。 ​    官方文档 步骤​    首先确保你已经在pom文件中添加了mybatis的相关依赖。 1.pom文件中添加plugin，在里面添加数据库相关驱动12">
+<meta property="og:description" content="前言​    flyway官网 是这样描述自己的产品的：flyway是数据库的版本控制工具，它可以使数据库迁移变得简单。对我这种个人学习者的人来说，第二点太重要了，如果我换了个电脑，在github上clone下来源代码，通过执行一条命令，数据库就全部建好了。Springboot如何集成flyway呢？如何使用呢？ 步骤1.在pom文件中添加plugin​    示例如下： 123456789101">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-20T14:43:25.443Z">
+<meta property="og:image" content="http://ptab4lsol.bkt.clouddn.com/flywaystep1.jpg">
+<meta property="og:image" content="http://ptab4lsol.bkt.clouddn.com/flywaystep2.jpg">
+<meta property="og:updated_time" content="2019-06-20T14:59:30.104Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mybatis generator配置">
-<meta name="twitter:description" content="前言​    每次做完一些配置都会忘，都要回去看博客，mybatis-generator的配置算是比较麻烦的了，但是配好之后用起来很方便，什么mapper，xml、model一键生成，几乎也不用自己写sql语句，爽的飞起，所以必须记录一下。 ​    官方文档 步骤​    首先确保你已经在pom文件中添加了mybatis的相关依赖。 1.pom文件中添加plugin，在里面添加数据库相关驱动12">
+<meta name="twitter:title" content="集成flyway对数据库进行版本控制">
+<meta name="twitter:description" content="前言​    flyway官网 是这样描述自己的产品的：flyway是数据库的版本控制工具，它可以使数据库迁移变得简单。对我这种个人学习者的人来说，第二点太重要了，如果我换了个电脑，在github上clone下来源代码，通过执行一条命令，数据库就全部建好了。Springboot如何集成flyway呢？如何使用呢？ 步骤1.在pom文件中添加plugin​    示例如下： 123456789101">
+<meta name="twitter:image" content="http://ptab4lsol.bkt.clouddn.com/flywaystep1.jpg">
 
 
 
@@ -117,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="https://cpsky.github.io/2019/06/20/mybatis-generator配置/">
+  <link rel="canonical" href="https://cpsky.github.io/2019/06/20/集成flyway对数据库进行版本控制/">
 
 
 
@@ -127,7 +130,7 @@
   };
 </script>
 
-  <title>mybatis generator配置 | 史锴源的博客</title>
+  <title>集成flyway对数据库进行版本控制 | 史锴源的博客</title>
   
 
 
@@ -359,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cpsky.github.io/2019/06/20/mybatis-generator配置/">
+    <link itemprop="mainEntityOfPage" href="https://cpsky.github.io/2019/06/20/集成flyway对数据库进行版本控制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="史史史">
@@ -376,7 +379,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mybatis generator配置
+          <h1 class="post-title" itemprop="name headline">集成flyway对数据库进行版本控制
 
               
             
@@ -402,7 +405,7 @@
                 
               
 
-              <time title="创建时间：2019-06-20 10:06:47 / 修改时间：22:43:25" itemprop="dateCreated datePublished" datetime="2019-06-20T10:06:47+08:00">2019-06-20</time>
+              <time title="创建时间：2019-06-20 22:21:19 / 修改时间：22:59:30" itemprop="dateCreated datePublished" datetime="2019-06-20T22:21:19+08:00">2019-06-20</time>
             
 
             
@@ -442,8 +445,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/06/20/mybatis-generator配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/20/mybatis-generator配置/" itemprop="commentCount"></span>
+                <a href="/2019/06/20/集成flyway对数据库进行版本控制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/20/集成flyway对数据库进行版本控制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -457,7 +460,7 @@
              <i class="fa fa-book"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">844(字)</span>
+           <span class="post-count">318(字)</span>
            
          </span>
           
@@ -486,34 +489,19 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    每次做完一些配置都会忘，都要回去看博客，mybatis-generator的配置算是比较麻烦的了，但是配好之后用起来很方便，什么mapper，xml、model一键生成，几乎也不用自己写sql语句，爽的飞起，所以必须记录一下。</p>
-<p>​    <a href="http://www.mybatis.org/generator/" target="_blank" rel="noopener">官方文档</a></p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>​    首先确保你已经在pom文件中添加了mybatis的相关依赖。</p>
-<h3 id="1-pom文件中添加plugin，在里面添加数据库相关驱动"><a href="#1-pom文件中添加plugin，在里面添加数据库相关驱动" class="headerlink" title="1.pom文件中添加plugin，在里面添加数据库相关驱动"></a>1.pom文件中添加plugin，在里面添加数据库相关驱动</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.generator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-generator-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    <a href="https://flywaydb.org/" target="_blank" rel="noopener">flyway官网</a> 是这样描述自己的产品的：flyway是数据库的版本控制工具，它可以使数据库迁移变得简单。对我这种个人学习者的人来说，第二点太重要了，如果我换了个电脑，在github上clone下来源代码，通过执行一条命令，数据库就全部建好了。Springboot如何集成flyway呢？如何使用呢？</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-在pom文件中添加plugin"><a href="#1-在pom文件中添加plugin" class="headerlink" title="1.在pom文件中添加plugin"></a>1.在pom文件中添加plugin</h3><p>​    示例如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.flywaydb<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>flyway-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">url</span>&gt;</span>jdbc:mysql://localhost/community?serverTimezone=GMT<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">user</span>&gt;</span>root<span class="tag">&lt;/<span class="name">user</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">password</span>&gt;</span>*****<span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>​    我使用的是myssql数据库，所以添加的mysql的驱动</p>
-<h3 id="2-在resources下，创建generatorConfig-xml文件"><a href="#2-在resources下，创建generatorConfig-xml文件" class="headerlink" title="2. 在resources下，创建generatorConfig.xml文件"></a>2. 在resources下，创建generatorConfig.xml文件</h3><h3 id="3-配置generatorCofig-xml文件"><a href="#3-配置generatorCofig-xml文件" class="headerlink" title="3.配置generatorCofig.xml文件"></a>3.配置generatorCofig.xml文件</h3><p><a href="http://www.mybatis.org/generator/configreference/xmlconfig.html" target="_blank" rel="noopener">官网示例文件</a></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE generatorConfiguration</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">generatorConfiguration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">"DB2Tables"</span> <span class="attr">targetRuntime</span>=<span class="string">"MyBatis3"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span> <span class="attr">type</span>=<span class="string">"org.mybatis.generator.plugins.RowBoundsPlugin"</span>&gt;</span><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdbcConnection</span> <span class="attr">driverClass</span>=<span class="string">"com.mysql.cj.jdbc.Driver"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">connectionURL</span>=<span class="string">"jdbc:mysql://localhost/community?serverTimezone=GMT"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">userId</span>=<span class="string">"root"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">password</span>=<span class="string">"******"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"nullCatalogMeansCurrent"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">jdbcConnection</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaTypeResolver</span> &gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"forceBigDecimals"</span> <span class="attr">value</span>=<span class="string">"false"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaTypeResolver</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaModelGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"cpsky.community.model"</span> <span class="attr">targetProject</span>=<span class="string">"src/main/java"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"trimStrings"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaModelGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">sqlMapGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"mapper"</span>  <span class="attr">targetProject</span>=<span class="string">"src/main/resources"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">sqlMapGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaClientGenerator</span> <span class="attr">type</span>=<span class="string">"XMLMAPPER"</span> <span class="attr">targetPackage</span>=<span class="string">"cpsky.community.mapper"</span>  <span class="attr">targetProject</span>=<span class="string">"src/main/java"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaClientGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"user"</span> <span class="attr">domainObjectName</span>=<span class="string">"User"</span> &gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"question"</span> <span class="attr">domainObjectName</span>=<span class="string">"Question"</span> &gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"comment"</span> <span class="attr">domainObjectName</span>=<span class="string">"Comment"</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">generatorConfiguration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p> <code>&lt;jdbcConnection&gt;填写你的数据库有关信息</code>  <code>&lt;javaModelGenerator&gt;生成java模型（配好路径）</code></p>
-<p><code>&lt;sqlMapperGenerator&gt;生成mapper.xml文件（可以修改生成方式 如注释等）</code></p>
-<p><a href="http://www.mybatis.org/generator/configreference/javaClientGenerator.html" target="_blank" rel="noopener">详见</a></p>
-<p> <code>&lt;javaClientGenerator&gt;生成mapper层</code></p>
-<p><code>&lt;table&gt;对应数据库的表</code></p>
-<h3 id="4-配置跟springboot相关联"><a href="#4-配置跟springboot相关联" class="headerlink" title="4.配置跟springboot相关联"></a>4.配置跟springboot相关联</h3><p><a href="http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/" target="_blank" rel="noopener">官网说明</a></p>
-<p>启动类添加<code>@MapperScan(mapper层路径如com.***.mapper)</code></p>
-<p>application.properties添加<code>mybatis.mapper-locations=classpath:mapper/*.xml</code></p>
-<p>application.properties添加<code>mybatis.type-aliases-package=com.example.domain.model</code></p>
-<h3 id="5-在终端运行命令"><a href="#5-在终端运行命令" class="headerlink" title="5.在终端运行命令"></a>5.在终端运行命令</h3><blockquote>
-<p>mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate    </p>
+<p>​    根据自身情况对相关联数据库进行配置。</p>
+<h3 id="2-创建Migration文件"><a href="#2-创建Migration文件" class="headerlink" title="2.创建Migration文件"></a>2.创建Migration文件</h3><p><img src="http://ptab4lsol.bkt.clouddn.com/flywaystep1.jpg" alt></p>
+<p> <img src="http://ptab4lsol.bkt.clouddn.com/flywaystep2.jpg" alt></p>
+<p>​    步骤很简单，唯一需要注意的点是：文件名必须是Vn(n递增)__(两个下划线)*.sql      *里面就是一些描述性语言</p>
+<p>文件里面的内容就是你对数据库做出的修改。</p>
+<h3 id="3-在终端执行命令"><a href="#3-在终端执行命令" class="headerlink" title="3.在终端执行命令"></a>3.在终端执行命令</h3><blockquote>
+<p>mvn flyway:migrate</p>
 </blockquote>
-<p>​    overwrite默认覆盖原先已经存在的文件</p>
-<h3 id="6-自定义查询语句"><a href="#6-自定义查询语句" class="headerlink" title="6.自定义查询语句"></a>6.自定义查询语句</h3><p>​    因为overwirte=true 会覆盖原文件，所以要新建.xml文件和对应的mapper接口。举个例子：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"cpsky.community.mapper.CommentExtMapper"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"BaseResultMap"</span> <span class="attr">type</span>=<span class="string">"cpsky.community.model.Comment"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">          WARNING - @mbg.generated</span></span><br><span class="line"><span class="comment">          This element is automatically generated by MyBatis Generator, do not modify.</span></span><br><span class="line"><span class="comment">          This element was generated on Sat Jun 08 11:39:52 CST 2019.</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"id"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"parent_id"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"parentId"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"type"</span> <span class="attr">jdbcType</span>=<span class="string">"INTEGER"</span> <span class="attr">property</span>=<span class="string">"type"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"commentator"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"commentator"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"gmt_create"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"gmtCreate"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"gmt_modified"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"gmtModified"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"like_count"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"likeCount"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"content"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"content"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"comment_count"</span> <span class="attr">jdbcType</span>=<span class="string">"INTEGER"</span> <span class="attr">property</span>=<span class="string">"commentCount"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"incCommentCount"</span> <span class="attr">parameterType</span>=<span class="string">"cpsky.community.model.Comment"</span>&gt;</span></span><br><span class="line">        update COMMENT</span><br><span class="line">        set comment_count = comment_count + #&#123;commentCount,jdbcType=INTEGER&#125;</span><br><span class="line">        where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    要修改的有<code>namespace</code> ，以及curd语句，语法就是mybatis的语法辣，对应的Mapper接口长这个样子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CommentExtMapper</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">incCommentCount</span><span class="params">(Comment comment)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>​    万事ok!</p>
 
       
     </div>
@@ -542,7 +530,7 @@
 	    <p id="div-border-left-red">
 	   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br>
 	    <span>
-	    <b>本文地址: </b><a href="/2019/06/20/mybatis-generator配置/" title="mybatis generator配置">https://cpsky.github.io/2019/06/20/mybatis-generator配置/</a><br><b>转载请注明出处, 谢谢！</b>
+	    <b>本文地址: </b><a href="/2019/06/20/集成flyway对数据库进行版本控制/" title="集成flyway对数据库进行版本控制">https://cpsky.github.io/2019/06/20/集成flyway对数据库进行版本控制/</a><br><b>转载请注明出处, 谢谢！</b>
 	    </span>
 	    </p>
 </div>
@@ -555,7 +543,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/mybatis/" rel="tag"><i class="fa fa-tag"></i> mybatis</a>
+            <a href="/tags/flyway/" rel="tag"><i class="fa fa-tag"></i> flyway</a>
           
         </div>
       
@@ -568,8 +556,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/18/动态规划算法学习/" rel="next" title="动态规划算法学习">
-                <i class="fa fa-chevron-left"></i> 动态规划算法学习
+              <a href="/2019/06/20/mybatis-generator配置/" rel="next" title="mybatis generator配置">
+                <i class="fa fa-chevron-left"></i> mybatis generator配置
               </a>
             
           </div>
@@ -577,10 +565,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/20/集成flyway对数据库进行版本控制/" rel="prev" title="集成flyway对数据库进行版本控制">
-                集成flyway对数据库进行版本控制 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -797,7 +781,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-pom文件中添加plugin，在里面添加数据库相关驱动"><span class="nav-text">1.pom文件中添加plugin，在里面添加数据库相关驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-在resources下，创建generatorConfig-xml文件"><span class="nav-text">2. 在resources下，创建generatorConfig.xml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置generatorCofig-xml文件"><span class="nav-text">3.配置generatorCofig.xml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-配置跟springboot相关联"><span class="nav-text">4.配置跟springboot相关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-在终端运行命令"><span class="nav-text">5.在终端运行命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-自定义查询语句"><span class="nav-text">6.自定义查询语句</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-在pom文件中添加plugin"><span class="nav-text">1.在pom文件中添加plugin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-创建Migration文件"><span class="nav-text">2.创建Migration文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在终端执行命令"><span class="nav-text">3.在终端执行命令</span></a></li></ol></li></ol></div>
             
 
           </div>
