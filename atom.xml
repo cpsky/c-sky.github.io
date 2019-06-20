@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cpsky.github.io/"/>
-  <updated>2019-06-20T02:02:32.315Z</updated>
+  <updated>2019-06-20T02:07:49.335Z</updated>
   <id>https://cpsky.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mybatis generator配置</title>
+    <link href="https://cpsky.github.io/2019/06/20/mybatis-generator%E9%85%8D%E7%BD%AE/"/>
+    <id>https://cpsky.github.io/2019/06/20/mybatis-generator配置/</id>
+    <published>2019-06-20T02:06:47.000Z</published>
+    <updated>2019-06-20T02:07:49.335Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="工程" scheme="https://cpsky.github.io/categories/%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="mybatis" scheme="https://cpsky.github.io/tags/mybatis/"/>
+    
+      <category term="工具" scheme="https://cpsky.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>动态规划算法学习</title>

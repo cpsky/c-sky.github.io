@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[mybatis generator配置]]></title>
+    <url>%2F2019%2F06%2F20%2Fmybatis-generator%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>工程</category>
+      </categories>
+      <tags>
+        <tag>mybatis</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[动态规划算法学习]]></title>
     <url>%2F2019%2F06%2F18%2F%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%2F</url>
     <content type="text"><![CDATA[前言​ 这几天做了一个leetcode的题，用到了动态规划，因为对算法本身也不熟悉，所以记录下来。 题目 查看leetcode题目 描述：有这么一个游戏，提前在[1,n]中选定一个数字，让你猜数字是什么，如果猜错了的话要支付猜错那个数字所代表的的钱，然后告诉你是猜大了还是猜小了，比如在[1,10]中选定了6，一开始猜的是5，那么就要支付5块钱，之后猜的是7，那么就要支付4块钱，直至猜到正确数字6为止。问题是：给定一个n，随机选定一个数字（这个数字是未知的，也不会给出），请问要支付多少钱能够保证获胜？ 我的思路​ 一开始以为是二分查找的问题，但是不然，二分查找并不能保证最快速的找出想要的数字，而且题目要求要支付多少钱能够保证获胜，二分的思想也与题目不符。后话就是我最后知道了解决这类最的问题一般是使用动态规划法，那就学起来呗。 动态规划算法介绍 动态算法的核心就是记住子问题的解 求解方式有两种①自顶向下的备忘录法 ②自底向上法 结合具体例子分析一下两种算法 对于求斐波那契数列来说最常见的方式就是递归法，递归示意图如下： ​ 但是这种直接递归的方式计算了多次f(1)、f(2)、f(3)等结果，如果使用动态递归方法如何解决呢？ 1.自顶向下的备忘录法​ 建立数组Memo，用以保存子问题的解 12345678910111213141516171819202122public static int Fibonacci(int n)&#123; if(n&lt;=0) return n; int []Memo=new int[n+1]; for(int i=0;i&lt;=n;i++) Memo[i]=-1; return fib(n, Memo); &#125; public static int fib(int n,int []Memo) &#123; if(Memo[n]!=-1) return Memo[n]; //如果已经求出了fib（n）的值直接返回，否则将求出的值保存在Memo备忘录中。 if(n&lt;=2) Memo[n]=1; else Memo[n]=fib( n-1,Memo)+fib(n-2,Memo); return Memo[n]; &#125; ​ 上述代码通过数组Memo负责记录f(1)、f(2)….的解，如果数组Memo的某个位置一旦有了!-1的值，这个值直接就确定下来，下次递归可以直接调用。f(n)的值保存在Memo[n]中。 2.自底向上法​ 上述方法实际上还是使用了递归，如果先计算f(1)呢？这就引出了自底向上法，先直接计算子问题，再计算父问题，代码如下： 1234567891011121314public static int fib(int n) &#123; if (n &lt;= 2) &#123; return 1; &#125; int res = 0; int a1 = 1; int a2 = 1; for (int i = 3; i &lt;= n; i++) &#123; res = a1 + a2; a1 = a2; a2 = res; &#125; return res; &#125; ​ 这个也比较好理解，用res记录每次的f(n)，a1当做f(n-2)，a2当做f(n-1)。 动态规划适用的问题：1.最优子结构​ 与贪心算法相反，每一步的求解都是建立在子问题最优的基础上，我们需要做的是考察每个子结构，从中选出最优解。 2.重叠子问题​ 通过数组保存子问题的解，避免通过递归对相同子问题进行多次计算。 动态规划的经典模型1.线性模型2.区间模型3.背包模型总结​ 实质上，在判断一道题目可以用动态规划的思想解决后，要找的就是状态转移方程了（划重点） ​ 说了那么多，最初那道leetcode题怎么解呢？ 12345678910111213141516171819202122public static int getMoneyAmount(int n) &#123; int[][] dp = new int[n + 1][n + 1]; return findDpMax(1, n, dp); &#125; public static int findDpMax(int low, int high, int[][] dp) &#123; if (low &gt;= high) &#123; return 0; &#125; if (dp[low][high] != 0) &#123; return dp[low][high]; &#125; dp[low][high] = Integer.MAX_VALUE; for (int i = low; i &lt;= high; i++) &#123; int left = findDpMax(low, i - 1, dp); int right = findDpMax(i + 1, high, dp); int temp = Math.max(left, right) + i; dp[low][high] = Math.min(temp, dp[low][high]); &#125; System.out.println(low + "," + high + ":" + dp[low][high]); return dp[low][high]; &#125; ​ 通过dp[low][high]二维数组保存在[low, high]区间内所需要的金钱。首先，明确一个规则，当我们选定一个数字i，如果失败只有从左右两个区间[low, i-1]，[i+1, high]中选择，为了保证胜利，我们要选择这两个区间中所花费金额最大的那个。这样状态转移方程就出来了：dp[low][high] = max{dp[low][i-1],dp[i+1][high]} + i，为了保证选择我们依次进行猜测的数字是最合理的，我们需要在[low,high]区间中遍历找到最优的选择方式。这就有了dp[low][high] = Math.min(temp, dp[low][high])以及for循环。 ​ 之前做的硬币问题也可以动过动态规划解决，给你面值1,3,4的硬币，凑成13的最少硬币数是啥？凑成11的呢？凑成6的呢？嘿嘿，贪心算法就解决不了了。]]></content>
