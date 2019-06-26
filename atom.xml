@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cpsky.github.io/"/>
-  <updated>2019-06-20T14:59:30.104Z</updated>
+  <updated>2019-06-26T07:23:00.905Z</updated>
   <id>https://cpsky.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kmp算法</title>
+    <link href="https://cpsky.github.io/2019/06/25/kmp%E7%AE%97%E6%B3%95/"/>
+    <id>https://cpsky.github.io/2019/06/25/kmp算法/</id>
+    <published>2019-06-25T15:23:24.000Z</published>
+    <updated>2019-06-26T07:23:00.905Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;​   
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cpsky.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="kmp" scheme="https://cpsky.github.io/tags/kmp/"/>
+    
+      <category term="数据结构" scheme="https://cpsky.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>集成flyway对数据库进行版本控制</title>

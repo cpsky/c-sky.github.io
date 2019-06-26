@@ -96,18 +96,20 @@
 
 
 
-  <meta name="description" content="前言​    每次做完一些配置都会忘，都要回去看博客，mybatis-generator的配置算是比较麻烦的了，但是配好之后用起来很方便，什么mapper，xml、model一键生成，几乎也不用自己写sql语句，爽的飞起，所以必须记录一下。 ​    官方文档 步骤​    首先确保你已经在pom文件中添加了mybatis的相关依赖。 1.pom文件中添加plugin，在里面添加数据库相关驱动12">
-<meta name="keywords" content="mybatis">
+  <meta name="description" content="前言​    这两天因为一些原因接触了kmp字串符匹配算法，原理很好理解，就是代码实现费了一番周折，看了《数据结构》这本书有关kmp算法的内容，又看了网上给出的一些解决方案，发现还是书上的代码最简洁、最易理解。 一些定义​    s1s2…..sn：主串 ​    t1t2…..tn： 模式串 ​    j ：模式串指针 ​    i ：主串指针 ​    失配 ：si !=  tj   原理​">
+<meta name="keywords" content="kmp,数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mybatis generator配置">
-<meta property="og:url" content="https://cpsky.github.io/2019/06/20/mybatis-generator配置/index.html">
+<meta property="og:title" content="kmp算法">
+<meta property="og:url" content="https://cpsky.github.io/2019/06/25/kmp算法/index.html">
 <meta property="og:site_name" content="史锴源的博客">
-<meta property="og:description" content="前言​    每次做完一些配置都会忘，都要回去看博客，mybatis-generator的配置算是比较麻烦的了，但是配好之后用起来很方便，什么mapper，xml、model一键生成，几乎也不用自己写sql语句，爽的飞起，所以必须记录一下。 ​    官方文档 步骤​    首先确保你已经在pom文件中添加了mybatis的相关依赖。 1.pom文件中添加plugin，在里面添加数据库相关驱动12">
+<meta property="og:description" content="前言​    这两天因为一些原因接触了kmp字串符匹配算法，原理很好理解，就是代码实现费了一番周折，看了《数据结构》这本书有关kmp算法的内容，又看了网上给出的一些解决方案，发现还是书上的代码最简洁、最易理解。 一些定义​    s1s2…..sn：主串 ​    t1t2…..tn： 模式串 ​    j ：模式串指针 ​    i ：主串指针 ​    失配 ：si !=  tj   原理​">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-20T14:43:25.443Z">
+<meta property="og:image" content="http://ptab4lsol.bkt.clouddn.com/kmp1.jpg">
+<meta property="og:updated_time" content="2019-06-26T07:23:00.905Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mybatis generator配置">
-<meta name="twitter:description" content="前言​    每次做完一些配置都会忘，都要回去看博客，mybatis-generator的配置算是比较麻烦的了，但是配好之后用起来很方便，什么mapper，xml、model一键生成，几乎也不用自己写sql语句，爽的飞起，所以必须记录一下。 ​    官方文档 步骤​    首先确保你已经在pom文件中添加了mybatis的相关依赖。 1.pom文件中添加plugin，在里面添加数据库相关驱动12">
+<meta name="twitter:title" content="kmp算法">
+<meta name="twitter:description" content="前言​    这两天因为一些原因接触了kmp字串符匹配算法，原理很好理解，就是代码实现费了一番周折，看了《数据结构》这本书有关kmp算法的内容，又看了网上给出的一些解决方案，发现还是书上的代码最简洁、最易理解。 一些定义​    s1s2…..sn：主串 ​    t1t2…..tn： 模式串 ​    j ：模式串指针 ​    i ：主串指针 ​    失配 ：si !=  tj   原理​">
+<meta name="twitter:image" content="http://ptab4lsol.bkt.clouddn.com/kmp1.jpg">
 
 
 
@@ -117,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="https://cpsky.github.io/2019/06/20/mybatis-generator配置/">
+  <link rel="canonical" href="https://cpsky.github.io/2019/06/25/kmp算法/">
 
 
 
@@ -127,7 +129,7 @@
   };
 </script>
 
-  <title>mybatis generator配置 | 史锴源的博客</title>
+  <title>kmp算法 | 史锴源的博客</title>
   
 
 
@@ -359,7 +361,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cpsky.github.io/2019/06/20/mybatis-generator配置/">
+    <link itemprop="mainEntityOfPage" href="https://cpsky.github.io/2019/06/25/kmp算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="史史史">
@@ -376,7 +378,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mybatis generator配置
+          <h1 class="post-title" itemprop="name headline">kmp算法
 
               
             
@@ -402,12 +404,24 @@
                 
               
 
-              <time title="创建时间：2019-06-20 10:06:47 / 修改时间：22:43:25" itemprop="dateCreated datePublished" datetime="2019-06-20T10:06:47+08:00">2019-06-20</time>
+              <time title="创建时间：2019-06-25 23:23:24" itemprop="dateCreated datePublished" datetime="2019-06-25T23:23:24+08:00">2019-06-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-26 15:23:00" itemprop="dateModified" datetime="2019-06-26T15:23:00+08:00">2019-06-26</time>
               
             
           </span>
@@ -424,7 +438,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/框架/" itemprop="url" rel="index"><span itemprop="name">框架</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
 
                 
                 
@@ -442,8 +456,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/06/20/mybatis-generator配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/20/mybatis-generator配置/" itemprop="commentCount"></span>
+                <a href="/2019/06/25/kmp算法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/25/kmp算法/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -457,7 +471,7 @@
              <i class="fa fa-book"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">844(字)</span>
+           <span class="post-count">840(字)</span>
            
          </span>
           
@@ -486,34 +500,34 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    每次做完一些配置都会忘，都要回去看博客，mybatis-generator的配置算是比较麻烦的了，但是配好之后用起来很方便，什么mapper，xml、model一键生成，几乎也不用自己写sql语句，爽的飞起，所以必须记录一下。</p>
-<p>​    <a href="http://www.mybatis.org/generator/" target="_blank" rel="noopener">官方文档</a></p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>​    首先确保你已经在pom文件中添加了mybatis的相关依赖。</p>
-<h3 id="1-pom文件中添加plugin，在里面添加数据库相关驱动"><a href="#1-pom文件中添加plugin，在里面添加数据库相关驱动" class="headerlink" title="1.pom文件中添加plugin，在里面添加数据库相关驱动"></a>1.pom文件中添加plugin，在里面添加数据库相关驱动</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.generator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-generator-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    这两天因为一些原因接触了kmp字串符匹配算法，原理很好理解，就是代码实现费了一番周折，看了《数据结构》这本书有关kmp算法的内容，又看了网上给出的一些解决方案，发现还是书上的代码最简洁、最易理解。</p>
+<h2 id="一些定义"><a href="#一些定义" class="headerlink" title="一些定义"></a>一些定义</h2><p>​    s<sub>1</sub>s<sub>2</sub>…..s<sub>n</sub>：主串</p>
+<p>​    t<sub>1</sub>t<sub>2</sub>…..t<sub>n</sub>： 模式串</p>
+<p>​    j ：模式串指针</p>
+<p>​    i ：主串指针</p>
+<p>​    失配 ：s<sub>i</sub> !=  t<sub>j</sub>  </p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>​    bp字符串的朴素匹配算法：当<code>模式</code>失配时，我们需要把模式指针<code>j</code>移动到0，主串指针<code>i</code>移动到<code>i-j+2</code>处。</p>
+<p>​    kmp算法在此基础上进行改进，对于模式串来说，每个字符对应一个<code>next</code>值（所有next值组成一个next数组），当模式失配时，主串的指针<code>i</code>不变，模式串的指针<code>j</code>移动到<code>next[j]</code>所对应的位置处。优点在于，kmp算法减少了指针的移动次数。</p>
+<p>​    kmp算法的实质：结合下图进行说明</p>
+<p><img src="http://ptab4lsol.bkt.clouddn.com/kmp1.jpg" alt></p>
+<p>​    如上图所示，当失配情况发生时，模式串[1,7]是显然已经匹配完成的。假如1、2位置处的所代表字符与6、7位置所代表的字符相同，当失配之后进行指针移动时，我们可以直接将1,2,移动到6,7原先所在的位置，大大减少了比较次数，主串指针也无需回溯。模式串向右滑动的距离就取决于next[j](此时j==8)。接下来就是如何求解的问题。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>​    求模式串向右滑动的距离，换句话说就是当失配发生时，主串<code>i</code>指针所对应的的字符应当直接和模式串<code>第k个字符</code>相比较，<code>k</code>的值就是<code>next[j]</code>,<code>j</code>是失配发生时模式串的指针位置。从上面的例子可以看出，求解<code>k</code>所对应的方程式为：t<sub>1</sub>t<sub>2</sub>t<sub>k-1</sub>  = t<sub>j-k+1</sub>t<sub>j-k+2</sub>…t<sub>j-1</sub>  。</p>
+<p>​    由此引出求next数组定义：</p>
+<ul>
+<li><p>next[1] = 0，t<sub>1</sub> != s<sub>i</sub>时，下一步进行t<sub>1</sub>与s<sub>i+1</sub>的比较</p>
+</li>
+<li><p>k=1时,next[j] = 1，即不存在相同子串，下一步进行t<sub>1</sub>与s<sub>i</sub>的比较</p>
+</li>
+<li><p>next[j] = k，(k尽可能大)<br>假如next数组已经求解完成，下面是kmp算法的实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">kmp</span><span class="params">(<span class="keyword">char</span>[] b, <span class="keyword">char</span>[] c)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//b是模式串，c是主串</span></span><br><span class="line">        <span class="keyword">int</span>[] next = getNexts(b);</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">1</span>,i = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (j &lt; b.length &amp;&amp; i &lt; c.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (j == <span class="number">0</span> || b[j - <span class="number">1</span>] == c[i - <span class="number">1</span>]) &#123;</span><br><span class="line">                i++;j++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                j = next[j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (j &gt; b.length - <span class="number">1</span>) <span class="keyword">return</span> i - b.length;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p>​    我使用的是myssql数据库，所以添加的mysql的驱动</p>
-<h3 id="2-在resources下，创建generatorConfig-xml文件"><a href="#2-在resources下，创建generatorConfig-xml文件" class="headerlink" title="2. 在resources下，创建generatorConfig.xml文件"></a>2. 在resources下，创建generatorConfig.xml文件</h3><h3 id="3-配置generatorCofig-xml文件"><a href="#3-配置generatorCofig-xml文件" class="headerlink" title="3.配置generatorCofig.xml文件"></a>3.配置generatorCofig.xml文件</h3><p><a href="http://www.mybatis.org/generator/configreference/xmlconfig.html" target="_blank" rel="noopener">官网示例文件</a></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE generatorConfiguration</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">generatorConfiguration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context</span> <span class="attr">id</span>=<span class="string">"DB2Tables"</span> <span class="attr">targetRuntime</span>=<span class="string">"MyBatis3"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span> <span class="attr">type</span>=<span class="string">"org.mybatis.generator.plugins.RowBoundsPlugin"</span>&gt;</span><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">jdbcConnection</span> <span class="attr">driverClass</span>=<span class="string">"com.mysql.cj.jdbc.Driver"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">connectionURL</span>=<span class="string">"jdbc:mysql://localhost/community?serverTimezone=GMT"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">userId</span>=<span class="string">"root"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">password</span>=<span class="string">"******"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"nullCatalogMeansCurrent"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">jdbcConnection</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaTypeResolver</span> &gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"forceBigDecimals"</span> <span class="attr">value</span>=<span class="string">"false"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaTypeResolver</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaModelGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"cpsky.community.model"</span> <span class="attr">targetProject</span>=<span class="string">"src/main/java"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"trimStrings"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaModelGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">sqlMapGenerator</span> <span class="attr">targetPackage</span>=<span class="string">"mapper"</span>  <span class="attr">targetProject</span>=<span class="string">"src/main/resources"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">sqlMapGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">javaClientGenerator</span> <span class="attr">type</span>=<span class="string">"XMLMAPPER"</span> <span class="attr">targetPackage</span>=<span class="string">"cpsky.community.mapper"</span>  <span class="attr">targetProject</span>=<span class="string">"src/main/java"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"enableSubPackages"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">javaClientGenerator</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"user"</span> <span class="attr">domainObjectName</span>=<span class="string">"User"</span> &gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"question"</span> <span class="attr">domainObjectName</span>=<span class="string">"Question"</span> &gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span> <span class="attr">tableName</span>=<span class="string">"comment"</span> <span class="attr">domainObjectName</span>=<span class="string">"Comment"</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">generatorConfiguration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>​    <strong>由于数组是从0开始的，所以涉及的数组的计算都将下标减1。</strong>由上文的介绍，代码很容易理解。</p>
+<p>求next数组的思想跟kmp算法的思想是相似的，实质上是字符串的自身匹配，只不过主串要从1下标开始，模式串要从0下标开始（仔细想想很好理解，因为需要后面的子串和前面的子串相匹配嘛），代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] getNexts(<span class="keyword">char</span>[] b) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] next = <span class="keyword">new</span> <span class="keyword">int</span>[b.length];</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>,j = <span class="number">0</span>;</span><br><span class="line">        next[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; b.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (j == <span class="number">0</span> || b[i - <span class="number">1</span>] == b[j - <span class="number">1</span>]) &#123;</span><br><span class="line">                i++;j++;next[i - <span class="number">1</span>] = j;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;j = next[j - <span class="number">1</span>];&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> next;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p> <code>&lt;jdbcConnection&gt;填写你的数据库有关信息</code>  <code>&lt;javaModelGenerator&gt;生成java模型（配好路径）</code></p>
-<p><code>&lt;sqlMapperGenerator&gt;生成mapper.xml文件（可以修改生成方式 如注释等）</code></p>
-<p><a href="http://www.mybatis.org/generator/configreference/javaClientGenerator.html" target="_blank" rel="noopener">详见</a></p>
-<p> <code>&lt;javaClientGenerator&gt;生成mapper层</code></p>
-<p><code>&lt;table&gt;对应数据库的表</code></p>
-<h3 id="4-配置跟springboot相关联"><a href="#4-配置跟springboot相关联" class="headerlink" title="4.配置跟springboot相关联"></a>4.配置跟springboot相关联</h3><p><a href="http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/" target="_blank" rel="noopener">官网说明</a></p>
-<p>启动类添加<code>@MapperScan(mapper层路径如com.***.mapper)</code></p>
-<p>application.properties添加<code>mybatis.mapper-locations=classpath:mapper/*.xml</code></p>
-<p>application.properties添加<code>mybatis.type-aliases-package=com.example.domain.model</code></p>
-<h3 id="5-在终端运行命令"><a href="#5-在终端运行命令" class="headerlink" title="5.在终端运行命令"></a>5.在终端运行命令</h3><blockquote>
-<p>mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate    </p>
-</blockquote>
-<p>​    overwrite默认覆盖原先已经存在的文件</p>
-<h3 id="6-自定义查询语句"><a href="#6-自定义查询语句" class="headerlink" title="6.自定义查询语句"></a>6.自定义查询语句</h3><p>​    因为overwirte=true 会覆盖原文件，所以要新建.xml文件和对应的mapper接口。举个例子：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"cpsky.community.mapper.CommentExtMapper"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"BaseResultMap"</span> <span class="attr">type</span>=<span class="string">"cpsky.community.model.Comment"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">          WARNING - @mbg.generated</span></span><br><span class="line"><span class="comment">          This element is automatically generated by MyBatis Generator, do not modify.</span></span><br><span class="line"><span class="comment">          This element was generated on Sat Jun 08 11:39:52 CST 2019.</span></span><br><span class="line"><span class="comment">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"id"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"parent_id"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"parentId"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"type"</span> <span class="attr">jdbcType</span>=<span class="string">"INTEGER"</span> <span class="attr">property</span>=<span class="string">"type"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"commentator"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"commentator"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"gmt_create"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"gmtCreate"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"gmt_modified"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"gmtModified"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"like_count"</span> <span class="attr">jdbcType</span>=<span class="string">"BIGINT"</span> <span class="attr">property</span>=<span class="string">"likeCount"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"content"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"content"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"comment_count"</span> <span class="attr">jdbcType</span>=<span class="string">"INTEGER"</span> <span class="attr">property</span>=<span class="string">"commentCount"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"incCommentCount"</span> <span class="attr">parameterType</span>=<span class="string">"cpsky.community.model.Comment"</span>&gt;</span></span><br><span class="line">        update COMMENT</span><br><span class="line">        set comment_count = comment_count + #&#123;commentCount,jdbcType=INTEGER&#125;</span><br><span class="line">        where id = #&#123;id&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    要修改的有<code>namespace</code> ，以及curd语句，语法就是mybatis的语法辣，对应的Mapper接口长这个样子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CommentExtMapper</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">incCommentCount</span><span class="params">(Comment comment)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>还有改进的nextval数组，有空再说咯。</p>
+</li>
+</ul>
 
       
     </div>
@@ -542,7 +556,7 @@
 	    <p id="div-border-left-red">
 	   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br>
 	    <span>
-	    <b>本文地址: </b><a href="/2019/06/20/mybatis-generator配置/" title="mybatis generator配置">https://cpsky.github.io/2019/06/20/mybatis-generator配置/</a><br><b>转载请注明出处, 谢谢！</b>
+	    <b>本文地址: </b><a href="/2019/06/25/kmp算法/" title="kmp算法">https://cpsky.github.io/2019/06/25/kmp算法/</a><br><b>转载请注明出处, 谢谢！</b>
 	    </span>
 	    </p>
 </div>
@@ -555,7 +569,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/mybatis/" rel="tag"><i class="fa fa-tag"></i> mybatis</a>
+            <a href="/tags/kmp/" rel="tag"><i class="fa fa-tag"></i> kmp</a>
+          
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
           
         </div>
       
@@ -568,8 +584,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/18/动态规划算法学习/" rel="next" title="动态规划算法学习">
-                <i class="fa fa-chevron-left"></i> 动态规划算法学习
+              <a href="/2019/06/20/集成flyway对数据库进行版本控制/" rel="next" title="集成flyway对数据库进行版本控制">
+                <i class="fa fa-chevron-left"></i> 集成flyway对数据库进行版本控制
               </a>
             
           </div>
@@ -577,10 +593,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/20/集成flyway对数据库进行版本控制/" rel="prev" title="集成flyway对数据库进行版本控制">
-                集成flyway对数据库进行版本控制 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -801,7 +813,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-pom文件中添加plugin，在里面添加数据库相关驱动"><span class="nav-text">1.pom文件中添加plugin，在里面添加数据库相关驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-在resources下，创建generatorConfig-xml文件"><span class="nav-text">2. 在resources下，创建generatorConfig.xml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置generatorCofig-xml文件"><span class="nav-text">3.配置generatorCofig.xml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-配置跟springboot相关联"><span class="nav-text">4.配置跟springboot相关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-在终端运行命令"><span class="nav-text">5.在终端运行命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-自定义查询语句"><span class="nav-text">6.自定义查询语句</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些定义"><span class="nav-text">一些定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-text">实现</span></a></li></ol></div>
             
 
           </div>
