@@ -29,7 +29,7 @@ tags: [kmp,数据结构]
 
 ​	kmp算法的实质：结合下图进行说明
 
-![](http://ptab4lsol.bkt.clouddn.com/kmp1.jpg)
+![](https://cxlsky.oss-cn-beijing.aliyuncs.com/blog/img/kmp1.jpg?Expires=1561903905&OSSAccessKeyId=TMP.AgH1dDeizQu0A5_b7Qp-ibfkWMGdfatESGFz266NO3h14n_v8jMtdp4EOteVADAtAhUA1CSI-pFQJMP-xUIGO8yNJ-oiHfcCFAh11_z6YDJvKp7i3SjjD6XPwhKq&Signature=R74HywpQwgp7tmHyiIh2%2FiOQ1ys%3D)
 
 ​	如上图所示，当失配情况发生时，模式串[1,7]是显然已经匹配完成的。假如1、2位置处的所代表字符与6、7位置所代表的字符相同，当失配之后进行指针移动时，我们可以直接将1,2,移动到6,7原先所在的位置，大大减少了比较次数，主串指针也无需回溯。模式串向右滑动的距离就取决于next[j]\(此时j==8)。接下来就是如何求解的问题。
 
