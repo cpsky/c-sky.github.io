@@ -104,12 +104,12 @@
 <meta property="og:site_name" content="史锴源的博客">
 <meta property="og:description" content="前言​    这几天做了一个leetcode的题，用到了动态规划，因为对算法本身也不熟悉，所以记录下来。 题目 查看leetcode题目  描述：有这么一个游戏，提前在[1,n]中选定一个数字，让你猜数字是什么，如果猜错了的话要支付猜错那个数字所代表的的钱，然后告诉你是猜大了还是猜小了，比如在[1,10]中选定了6，一开始猜的是5，那么就要支付5块钱，之后猜的是7，那么就要支付4块钱，直至猜到正确">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ptab4lsol.bkt.clouddn.com/fibdiagram.jpg">
-<meta property="og:updated_time" content="2019-06-20T14:24:46.622Z">
+<meta property="og:image" content="https://cxlsky.oss-cn-beijing.aliyuncs.com/blog/img/fibdiagram.jpg?Expires=1561903995&OSSAccessKeyId=TMP.AgH1dDeizQu0A5_b7Qp-ibfkWMGdfatESGFz266NO3h14n_v8jMtdp4EOteVADAtAhUA1CSI-pFQJMP-xUIGO8yNJ-oiHfcCFAh11_z6YDJvKp7i3SjjD6XPwhKq&Signature=8PdVcp5YUM9BK0qqcOzbiBCu1ZM%3D">
+<meta property="og:updated_time" content="2019-06-30T13:13:24.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态规划算法学习">
 <meta name="twitter:description" content="前言​    这几天做了一个leetcode的题，用到了动态规划，因为对算法本身也不熟悉，所以记录下来。 题目 查看leetcode题目  描述：有这么一个游戏，提前在[1,n]中选定一个数字，让你猜数字是什么，如果猜错了的话要支付猜错那个数字所代表的的钱，然后告诉你是猜大了还是猜小了，比如在[1,10]中选定了6，一开始猜的是5，那么就要支付5块钱，之后猜的是7，那么就要支付4块钱，直至猜到正确">
-<meta name="twitter:image" content="http://ptab4lsol.bkt.clouddn.com/fibdiagram.jpg">
+<meta name="twitter:image" content="https://cxlsky.oss-cn-beijing.aliyuncs.com/blog/img/fibdiagram.jpg?Expires=1561903995&OSSAccessKeyId=TMP.AgH1dDeizQu0A5_b7Qp-ibfkWMGdfatESGFz266NO3h14n_v8jMtdp4EOteVADAtAhUA1CSI-pFQJMP-xUIGO8yNJ-oiHfcCFAh11_z6YDJvKp7i3SjjD6XPwhKq&Signature=8PdVcp5YUM9BK0qqcOzbiBCu1ZM%3D">
 
 
 
@@ -366,7 +366,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="史史史">
       <meta itemprop="description" content="写字的地方">
-      <meta itemprop="image" content="http://ptab4lsol.bkt.clouddn.com/blogavatar.ico">
+      <meta itemprop="image" content="https://cxlsky.oss-cn-beijing.aliyuncs.com/blogavatat.ico?Expires=1561904312&OSSAccessKeyId=TMP.AgH1dDeizQu0A5_b7Qp-ibfkWMGdfatESGFz266NO3h14n_v8jMtdp4EOteVADAtAhUA1CSI-pFQJMP-xUIGO8yNJ-oiHfcCFAh11_z6YDJvKp7i3SjjD6XPwhKq&Signature=bHMJYkBaIcJARf6COae1rnEHJk4%3D">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-20 22:24:46" itemprop="dateModified" datetime="2019-06-20T22:24:46+08:00">2019-06-20</time>
+                <time title="修改时间：2019-06-30 21:13:24" itemprop="dateModified" datetime="2019-06-30T21:13:24+08:00">2019-06-30</time>
               
             
           </span>
@@ -514,7 +514,7 @@
 <p>求解方式有两种①<strong>自顶向下的备忘录法</strong>   ②<strong>自底向上法</strong></p>
 <p>结合具体例子分析一下两种算法</p>
 <p>对于求斐波那契数列来说最常见的方式就是递归法，递归示意图如下：</p>
-<p><img src="http://ptab4lsol.bkt.clouddn.com/fibdiagram.jpg" alt></p>
+<p><img src="https://cxlsky.oss-cn-beijing.aliyuncs.com/blog/img/fibdiagram.jpg?Expires=1561903995&OSSAccessKeyId=TMP.AgH1dDeizQu0A5_b7Qp-ibfkWMGdfatESGFz266NO3h14n_v8jMtdp4EOteVADAtAhUA1CSI-pFQJMP-xUIGO8yNJ-oiHfcCFAh11_z6YDJvKp7i3SjjD6XPwhKq&Signature=8PdVcp5YUM9BK0qqcOzbiBCu1ZM%3D" alt></p>
 <p>​           但是这种直接递归的方式计算了多次f(1)、f(2)、f(3)等结果，如果使用动态递归方法如何解决呢？</p>
 <h3 id="1-自顶向下的备忘录法"><a href="#1-自顶向下的备忘录法" class="headerlink" title="1.自顶向下的备忘录法"></a>1.自顶向下的备忘录法</h3><p>​    建立数组Memo，用以保存子问题的解</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n&lt;=<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        <span class="keyword">int</span> []Memo=<span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)</span><br><span class="line">            Memo[i]=-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> fib(n, Memo);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> []Memo)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(Memo[n]!=-<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> Memo[n];</span><br><span class="line">    <span class="comment">//如果已经求出了fib（n）的值直接返回，否则将求出的值保存在Memo备忘录中。               </span></span><br><span class="line">        <span class="keyword">if</span>(n&lt;=<span class="number">2</span>)</span><br><span class="line">            Memo[n]=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span> Memo[n]=fib( n-<span class="number">1</span>,Memo)+fib(n-<span class="number">2</span>,Memo);  </span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> Memo[n];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -694,7 +694,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="http://ptab4lsol.bkt.clouddn.com/blogavatar.ico" alt="史史史">
+              <img class="site-author-image" itemprop="image" src="https://cxlsky.oss-cn-beijing.aliyuncs.com/blogavatat.ico?Expires=1561904312&OSSAccessKeyId=TMP.AgH1dDeizQu0A5_b7Qp-ibfkWMGdfatESGFz266NO3h14n_v8jMtdp4EOteVADAtAhUA1CSI-pFQJMP-xUIGO8yNJ-oiHfcCFAh11_z6YDJvKp7i3SjjD6XPwhKq&Signature=bHMJYkBaIcJARf6COae1rnEHJk4%3D" alt="史史史">
             
               <p class="site-author-name" itemprop="name">史史史</p>
               <div class="site-description motion-element" itemprop="description">写字的地方</div>
