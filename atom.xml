@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cpsky.github.io/"/>
-  <updated>2019-07-01T12:37:54.362Z</updated>
+  <updated>2019-07-04T14:45:52.191Z</updated>
   <id>https://cpsky.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>springboot练手项目遇到的那些坑</title>
+    <link href="https://cpsky.github.io/2019/07/04/springboot%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE%E9%81%87%E5%88%B0%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"/>
+    <id>https://cpsky.github.io/2019/07/04/springboot练手项目遇到的那些坑/</id>
+    <published>2019-07-04T14:37:12.000Z</published>
+    <updated>2019-07-04T14:45:52.191Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;​   
+        
+      
+    
+    </summary>
+    
+      <category term="工程" scheme="https://cpsky.github.io/categories/%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="springboot" scheme="https://cpsky.github.io/tags/springboot/"/>
+    
+      <category term="spring" scheme="https://cpsky.github.io/tags/spring/"/>
+    
+      <category term="mybatis" scheme="https://cpsky.github.io/tags/mybatis/"/>
+    
+  </entry>
   
   <entry>
     <title>kmp算法</title>

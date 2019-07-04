@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[springboot练手项目遇到的那些坑]]></title>
+    <url>%2F2019%2F07%2F04%2Fspringboot%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE%E9%81%87%E5%88%B0%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[前言​ 上个月跟着视频做了一个社区项目，学习了spring、springboot、mybatis的用法，框架的使用方法还是蛮好理解的，在这过程中掌握的知识就单独写几篇博客来说明吧，这篇博文主要讲在这个项目中遇到的那些坑 坑 使用的mysql数据库，并且将某些字段设置了默认值，但是通过Mybatis框架插入的时候，还是插入了null值，原来mybatis的insert方法是将所有字段强行全部插入。解决办法：在插入之前给对象赋初始值。]]></content>
+      <categories>
+        <category>工程</category>
+      </categories>
+      <tags>
+        <tag>springboot</tag>
+        <tag>spring</tag>
+        <tag>mybatis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[kmp算法]]></title>
     <url>%2F2019%2F06%2F25%2Fkmp%E7%AE%97%E6%B3%95%2F</url>
     <content type="text"><![CDATA[前言​ 这两天因为一些原因接触了kmp字串符匹配算法，原理很好理解，就是代码实现费了一番周折，看了《数据结构》这本书有关kmp算法的内容，又看了网上给出的一些解决方案，发现还是书上的代码最简洁、最易理解。 一些定义​ s1s2…..sn：主串 ​ t1t2…..tn： 模式串 ​ j ：模式串指针 ​ i ：主串指针 ​ 失配 ：si != tj 原理​ bp字符串的朴素匹配算法：当模式失配时，我们需要把模式指针j移动到0，主串指针i移动到i-j+2处。 ​ kmp算法在此基础上进行改进，对于模式串来说，每个字符对应一个next值（所有next值组成一个next数组），当模式失配时，主串的指针i不变，模式串的指针j移动到next[j]所对应的位置处。优点在于，kmp算法减少了指针的移动次数。 ​ kmp算法的实质：结合下图进行说明 ​ 如上图所示，当失配情况发生时，模式串[1,7]是显然已经匹配完成的。假如1、2位置处的所代表字符与6、7位置所代表的字符相同，当失配之后进行指针移动时，我们可以直接将1,2,移动到6,7原先所在的位置，大大减少了比较次数，主串指针也无需回溯。模式串向右滑动的距离就取决于next[j](此时j==8)。接下来就是如何求解的问题。 实现​ 求模式串向右滑动的距离，换句话说就是当失配发生时，主串i指针所对应的的字符应当直接和模式串第k个字符相比较，k的值就是next[j],j是失配发生时模式串的指针位置。从上面的例子可以看出，求解k所对应的方程式为：t1t2tk-1 = tj-k+1tj-k+2…tj-1 。 ​ 由此引出求next数组定义： next[1] = 0，t1 != si时，下一步进行t1与si+1的比较 k=1时,next[j] = 1，即不存在相同子串，下一步进行t1与si的比较 next[j] = k，(k尽可能大)假如next数组已经求解完成，下面是kmp算法的实现： 1234567891011121314public static int kmp(char[] b, char[] c) &#123; //b是模式串，c是主串 int[] next = getNexts(b); int j = 1,i = 1; while (j &lt; b.length &amp;&amp; i &lt; c.length) &#123; if (j == 0 || b[j - 1] == c[i - 1]) &#123; i++;j++; &#125; else &#123; j = next[j - 1]; &#125; &#125; if (j &gt; b.length - 1) return i - b.length; return -1; &#125; ​ 由于数组是从0开始的，所以涉及的数组的计算都将下标减1。由上文的介绍，代码很容易理解。 求next数组的思想跟kmp算法的思想是相似的，实质上是字符串的自身匹配，只不过主串要从1下标开始，模式串要从0下标开始（仔细想想很好理解，因为需要后面的子串和前面的子串相匹配嘛），代码如下： 1234567891011public static int[] getNexts(char[] b) &#123; int[] next = new int[b.length]; int i = 1,j = 0; next[0] = 0; while (i &lt; b.length) &#123; if (j == 0 || b[i - 1] == b[j - 1]) &#123; i++;j++;next[i - 1] = j; &#125; else &#123;j = next[j - 1];&#125; &#125; return next; &#125; 还有改进的nextval数组，有空再说咯。]]></content>
