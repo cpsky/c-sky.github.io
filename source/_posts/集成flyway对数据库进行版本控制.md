@@ -39,9 +39,9 @@ tags: [flyway]
 
 ### 2.创建Migration文件
 
-![](https://cxlsky.oss-cn-beijing.aliyuncs.com/blog/img/flywaystep1.jpg?Expires=1561903941&OSSAccessKeyId=TMP.AgH1dDeizQu0A5_b7Qp-ibfkWMGdfatESGFz266NO3h14n_v8jMtdp4EOteVADAtAhUA1CSI-pFQJMP-xUIGO8yNJ-oiHfcCFAh11_z6YDJvKp7i3SjjD6XPwhKq&Signature=ptEbJUdKyNsu0GPfLzvVZP4ByGc%3D)
+![](https://cxlsky.oss-cn-beijing.aliyuncs.com/blog/img/flywaystep1.jpg?x-oss-process=style/blogimg)
 
- ![](https://cxlsky.oss-cn-beijing.aliyuncs.com/blog/img/flywaystep2.jpg?Expires=1561903962&OSSAccessKeyId=TMP.AgH1dDeizQu0A5_b7Qp-ibfkWMGdfatESGFz266NO3h14n_v8jMtdp4EOteVADAtAhUA1CSI-pFQJMP-xUIGO8yNJ-oiHfcCFAh11_z6YDJvKp7i3SjjD6XPwhKq&Signature=m5FEDyoAGg89C%2F9a9T%2Fzh7UcXDQ%3D)
+ ![](https://cxlsky.oss-cn-beijing.aliyuncs.com/blog/img/flywaystep2.jpg?x-oss-process=style/blogimg)
 
 ​	步骤很简单，唯一需要注意的点是：文件名必须是Vn(n递增)__(两个下划线)\*.sql      \*里面就是一些描述性语言
 
