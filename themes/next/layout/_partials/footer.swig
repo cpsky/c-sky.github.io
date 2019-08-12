@@ -39,7 +39,7 @@
 
 {% if theme.footer.powered.enable %}
   <div class="powered-by">{#
-  #}{{ __('footer.powered', next_url('http://ptab4lsol.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720181208211826.jpg', '陈小猪', {class: 'theme-link'})) }}{#
+  #}{{ __('footer.powered', next_url('https://cxlsky.oss-cn-beijing.aliyuncs.com/blog/img/footimg.jpg', '陈小猪', {class: 'theme-link'})) }}{#
   #}{% if theme.footer.powered.version %} v{{ hexo_env('version') }}{% endif %}{#
  #}</div>
 {% endif %}
