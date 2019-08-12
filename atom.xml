@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cpsky.github.io/"/>
-  <updated>2019-07-21T11:37:59.422Z</updated>
+  <updated>2019-08-12T14:10:37.932Z</updated>
   <id>https://cpsky.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简单的死锁程序</title>
+    <link href="https://cpsky.github.io/2019/07/07/%E7%AE%80%E5%8D%95%E7%9A%84%E6%AD%BB%E9%94%81%E7%A8%8B%E5%BA%8F/"/>
+    <id>https://cpsky.github.io/2019/07/07/简单的死锁程序/</id>
+    <published>2019-07-07T12:14:09.000Z</published>
+    <updated>2019-08-12T14:10:37.932Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;​    在学习工程的同时也要注重基础，几个月前跟着书上写过的一个简单的死锁程序，写在博客中加深记忆&lt;/p&gt;
+&lt;h2 id=&quot;程序&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="并发" scheme="https://cpsky.github.io/categories/%E5%B9%B6%E5%8F%91/"/>
+    
+    
+      <category term="死锁" scheme="https://cpsky.github.io/tags/%E6%AD%BB%E9%94%81/"/>
+    
+  </entry>
   
   <entry>
     <title>springboot练手项目遇到的那些坑</title>
@@ -38,11 +65,11 @@
       <category term="工程" scheme="https://cpsky.github.io/categories/%E5%B7%A5%E7%A8%8B/"/>
     
     
+      <category term="mybatis" scheme="https://cpsky.github.io/tags/mybatis/"/>
+    
       <category term="springboot" scheme="https://cpsky.github.io/tags/springboot/"/>
     
       <category term="spring" scheme="https://cpsky.github.io/tags/spring/"/>
-    
-      <category term="mybatis" scheme="https://cpsky.github.io/tags/mybatis/"/>
     
   </entry>
   
