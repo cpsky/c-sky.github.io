@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cpsky.github.io/"/>
-  <updated>2019-08-12T14:10:37.932Z</updated>
+  <updated>2019-09-01T14:25:36.818Z</updated>
   <id>https://cpsky.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法笔记</title>
+    <link href="https://cpsky.github.io/2019/09/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    <id>https://cpsky.github.io/2019/09/01/算法笔记/</id>
+    <published>2019-09-01T14:22:23.000Z</published>
+    <updated>2019-09-01T14:25:36.818Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;笔记&quot;&gt;&lt;a href=&quot;#笔记&quot; class=&quot;headerlink&quot; title=&quot;笔记&quot;&gt;&lt;/a&gt;笔记&lt;/h2&gt;&lt;h3 id=&quot;1-链表和数组&quot;&gt;&lt;a href=&quot;#1-链表和数组&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://cpsky.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="数据结构" scheme="https://cpsky.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>简单的死锁程序</title>
