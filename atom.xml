@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cpsky.github.io/"/>
-  <updated>2019-09-01T14:25:36.818Z</updated>
+  <updated>2020-01-12T09:14:34.861Z</updated>
   <id>https://cpsky.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些sql题目</title>
+    <link href="https://cpsky.github.io/2020/01/12/%E4%B8%80%E4%BA%9Bsql%E9%A2%98%E7%9B%AE/"/>
+    <id>https://cpsky.github.io/2020/01/12/一些sql题目/</id>
+    <published>2020-01-12T07:10:53.000Z</published>
+    <updated>2020-01-12T09:14:34.861Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;em&gt;为方便观看表都是尽可能简单&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;*&lt;a href=&quot;http://sqlfiddle.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;推荐测试网站&lt;/a&gt;*&lt;/p&gt;
+&lt;h2 id=&quot;题目1&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="sql" scheme="https://cpsky.github.io/categories/sql/"/>
+    
+    
+      <category term="mysql" scheme="https://cpsky.github.io/tags/mysql/"/>
+    
+      <category term="sql" scheme="https://cpsky.github.io/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多线程</title>
+    <link href="https://cpsky.github.io/2019/09/16/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <id>https://cpsky.github.io/2019/09/16/多线程/</id>
+    <published>2019-09-16T12:41:19.000Z</published>
+    <updated>2019-09-16T12:42:58.489Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="java" scheme="https://cpsky.github.io/categories/java/"/>
+    
+    
+      <category term="多线程" scheme="https://cpsky.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>算法笔记</title>
@@ -47,7 +95,7 @@
     <link href="https://cpsky.github.io/2019/07/07/%E7%AE%80%E5%8D%95%E7%9A%84%E6%AD%BB%E9%94%81%E7%A8%8B%E5%BA%8F/"/>
     <id>https://cpsky.github.io/2019/07/07/简单的死锁程序/</id>
     <published>2019-07-07T12:14:09.000Z</published>
-    <updated>2019-08-12T14:10:37.932Z</updated>
+    <updated>2019-09-16T12:42:42.587Z</updated>
     
     <summary type="html">
     
@@ -62,7 +110,7 @@
     
     </summary>
     
-      <category term="并发" scheme="https://cpsky.github.io/categories/%E5%B9%B6%E5%8F%91/"/>
+      <category term="java" scheme="https://cpsky.github.io/categories/java/"/>
     
     
       <category term="死锁" scheme="https://cpsky.github.io/tags/%E6%AD%BB%E9%94%81/"/>
